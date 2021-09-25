@@ -48,7 +48,7 @@
               <a href="#" class="nav-link">About </a>
               <a href="#" class="nav-link">Services</a>
               <a href="#" class="nav-link">Projects</a>
-              <a href="#" class="nav-link">Contact</a>
+              <a href="#" class="nav-link" id="contact">Contact</a>
             </div>
 
             <img
@@ -63,19 +63,26 @@
             alt="arrow down"
             class="arrow"
           />
+
+          <div class="menu">
+            <a href="#" class="nav-link">About </a>
+            <a href="#" class="nav-link">Services</a>
+            <a href="#" class="nav-link">Projects</a>
+            <a href="#" class="nav-link" id="contact">Contact</a>
+          </div>
         </div>
         <main class="main">
           <div>
             <img src="./images/mobile/image-transform.jpg" class="img" alt="" />
           </div>
-          <div class="info">
+          <div class="info trans">
             <h2>Transform your brand</h2>
             <p>
               We are a full-service creative agency specializing in helping
               brands grow fast. Engage your clients through compelling visuals
               that do most of the marketing for you.
             </p>
-            <a href="#">Learn more</a>
+            <a href="#" class="trans-li">Learn more</a>
           </div>
           <div>
             <img
@@ -91,7 +98,7 @@
               photographers, videographers, and copywriters, we’ll build and
               extend your brand in digital places.
             </p>
-            <a href="#">Learn more</a>
+            <a href="#" class="stand-li">Learn more</a>
           </div>
           <div class="image">
             <img
@@ -125,37 +132,39 @@
         </main>
         <section class="testimonials">
           <h3 class="testimonial-title">Client testimonials</h3>
-          <div class="card">
-            <img src="./images/image-emily.jpg" alt="emily" />
-            <p class="desc">
-              We put our trust in Sunnyside and they delivered, making sure our
-              needs were met and deadlines were always hit.
-            </p>
-            <h3 class="name">Emily R.</h3>
-            <p class="position">Marketing Director</p>
-          </div>
-          <div class="card">
-            <img src="./images/image-thomas.jpg" alt="thomas" />
-            <p class="desc">
-              Sunnyside’s enthusiasm coupled with their keen interest in our
-              brand’s success made it a satisfying and enjoyable experience.
-            </p>
-            <h3 class="name">Thomas S</h3>
-            <p class="position">Chief Operating Officer</p>
-          </div>
-          <div class="card">
-            <img src="./images/image-jennie.jpg" alt="jennie" />
-            <p class="desc">
-              Incredible end result! Our sales increased over 400% when we
-              worked with Sunnyside. Highly recommended!
-            </p>
-            <h3 class="name">Jennie F</h3>
-            <p class="position">Business Owner</p>
+          <div class="card-container">
+            <div class="card">
+              <img src="./images/image-emily.jpg" alt="emily" />
+              <p class="desc">
+                We put our trust in Sunnyside and they delivered, making sure
+                our needs were met and deadlines were always hit.
+              </p>
+              <h3 class="name">Emily R.</h3>
+              <p class="position">Marketing Director</p>
+            </div>
+            <div class="card">
+              <img src="./images/image-thomas.jpg" alt="thomas" />
+              <p class="desc">
+                Sunnyside’s enthusiasm coupled with their keen interest in our
+                brand’s success made it a satisfying and enjoyable experience.
+              </p>
+              <h3 class="name">Thomas S</h3>
+              <p class="position">Chief Operating Officer</p>
+            </div>
+            <div class="card">
+              <img src="./images/image-jennie.jpg" alt="jennie" />
+              <p class="desc">
+                Incredible end result! Our sales increased over 400% when we
+                worked with Sunnyside. Highly recommended!
+              </p>
+              <h3 class="name">Jennie F</h3>
+              <p class="position">Business Owner</p>
+            </div>
           </div>
         </section>
       </div>
     </section>
-    <footer>
+    <footer class="footer">
       <div class="foo-img">
         <img
           src="./images/mobile/image-gallery-milkbottles.jpg"
@@ -188,12 +197,21 @@
           </div>
         </div>
         <div class="social-icons">
-          <img src="./images/icon-facebook.svg" alt="facebook" />
-          <img src="./images/icon-instagram.svg" alt="instagram" />
-          <img src="./images/icon-twitter.svg" alt="twitter" />
-          <img src="./images/icon-pinterest.svg" alt="pinterest" />
+          <ion-icon name="logo-facebook"></ion-icon>
+          <ion-icon name="logo-instagram"></ion-icon>
+          <ion-icon name="logo-twitter"></ion-icon>
+          <ion-icon name="logo-pinterest"></ion-icon>
         </div>
       </div>
     </footer>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="./index.js"></script>
   </body>
 </html>

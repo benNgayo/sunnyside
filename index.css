@@ -40,6 +40,7 @@ body {
   display: flex;
   flex-direction: column;
   height: 100vh;
+  position: relative;
 }
 .nav {
   display: flex;
@@ -52,6 +53,7 @@ body {
 }
 .toggle {
   height: 1.5rem;
+  cursor: pointer;
 }
 .title {
   color: var(--color);
@@ -66,18 +68,62 @@ body {
 .nav-links {
   display: flex;
   justify-content: space-around;
-  padding: 0.25rem;
+  align-items: center;
+  padding: 1rem 1.5rem;
   display: none;
 }
 
+#contact {
+  color: var(--dark-cian);
+  text-transform: uppercase;
+  background-color: var(--white);
+  padding: 1rem 1.5rem;
+  border-radius: 2rem;
+  font-family: var(--font-fraunces);
+  font-weight: 700;
+}
+#contact:hover {
+  background-color: rgb(137, 213, 238);
+  color: var(--white);
+}
 .nav-link {
   text-decoration: none;
   color: var(--color);
+  font-family: var(--font-barlow);
+  padding: 1rem 1.5rem;
+  border-radius: 2rem;
 }
-
+.nav-link:hover:not(#contact) {
+  border-bottom: 1px dotted whitesmoke;
+}
 .toggle {
   color: var(--color);
   font-size: 2rem;
+}
+.menu {
+  position: absolute;
+  display: grid;
+  width: 80%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 2rem 3rem;
+  margin: 0 auto;
+  text-align: center;
+}
+.menu a {
+  color: var(--dark-cian);
+}
+.menu::after {
+  content: "";
+  position: absolute;
+  margin-left: 30px;
+  border-width: 30px;
+  bottom: 100%;
+  right: 0;
+  border-style: solid;
+  border-color: transparent white white transparent;
 }
 .info > h2,
 .img-caption > h2 {
@@ -118,17 +164,23 @@ body {
   width: 3rem;
   align-self: center;
   margin-top: 3rem;
+  cursor: pointer;
+  transition: 0.5s;
 }
-
+.arrow:hover {
+  transform: translateY(3rem);
+}
 .img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .image {
   position: relative;
 }
 .img-caption {
   position: absolute;
-  bottom: 0.5rem;
+  bottom: 0;
 }
 .img-caption > p {
   color: var(--dark-cian);
@@ -202,7 +254,6 @@ body {
 .footer {
   display: flex;
   flex-direction: column;
-  padding: 5rem 2rem;
 }
 .socials {
   display: flex;
@@ -211,21 +262,141 @@ body {
 }
 .socials > a {
   text-decoration: none;
-  padding: 3rem;
+  padding: 2.5rem;
+  font-family: var(--font-barlow);
+  color: var(--very-dark-grayish-blue);
+  font-size: 1.5rem;
 }
 .social-icons {
   display: flex;
   justify-content: center;
 }
-.social-icons img {
+.social-icons ion-icon {
   padding: 1rem;
+  font-size: 2rem;
+  color: var(--very-dark-grayish-blue);
+  cursor: pointer;
+}
+.socials > a:hover,
+.social-icons ion-icon:hover {
+  color: var(--white);
 }
 .footer-header {
   text-align: center;
   font-family: var(--font-barlow);
-  font-size: 4rem;
   font-weight: 900;
+  font-size: 3.5rem;
 }
 footer {
+  overflow-x: hidden;
   background-color: var(--dark-moderate-cian);
+}
+
+/* learn more links */
+
+.trans-li::after {
+  content: "";
+  display: block;
+  position: relative;
+  top: -12px;
+  opacity: 0.5;
+  z-index: -1;
+  border-radius: 2rem;
+  background-color: var(--yellow);
+  height: 10px;
+  width: inherit;
+}
+.stand-li::after {
+  content: "";
+  display: block;
+  position: relative;
+  top: -12px;
+  opacity: 0.5;
+  z-index: -1;
+  border-radius: 2rem;
+  background-color: var(--soft-red);
+  height: 10px;
+  width: inherit;
+}
+
+.stand-li:hover::after,
+.trans-li:hover::after {
+  opacity: 1;
+}
+.menu #contact {
+  padding: 1rem 1rem;
+  background-color: var(--yellow);
+  width: 50%;
+  margin: 0 auto;
+}
+.show-menu {
+  display: none;
+}
+@media screen and (min-width: 774px) {
+  .nav-links {
+    display: block;
+  }
+  .toggle {
+    display: none;
+  }
+  .nav-center {
+    background-image: url(./images/desktop/image-header.jpg);
+  }
+  .main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* gap: 0.5rem; */
+  }
+  .trans {
+    order: -1;
+  }
+  .image {
+    display: flex;
+  }
+  .image {
+    width: 100%;
+    max-height: 100vh;
+    object-fit: cover;
+  }
+  .img-caption h2 {
+    font-size: 2rem;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  .img-caption p {
+    line-height: normal;
+    padding: 0;
+    margin-bottom: 0;
+  }
+  .card-container {
+    display: flex;
+    place-content: center;
+  }
+  .card img {
+    margin-bottom: 2rem;
+  }
+  .card {
+    padding: 0 1.5rem;
+  }
+  .footer {
+    max-height: 100vh;
+    overflow: hidden;
+  }
+  .img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .foo-img {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .socials {
+    padding: 0;
+  }
+  .menu {
+    height: 0;
+    overflow: hidden;
+    top: -200px;
+  }
 }
