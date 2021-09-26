@@ -102,7 +102,6 @@ body {
 }
 .menu {
   position: absolute;
-  display: grid;
   width: 80%;
   top: 50%;
   left: 50%;
@@ -111,9 +110,14 @@ body {
   padding: 2rem 3rem;
   margin: 0 auto;
   text-align: center;
+  display: none;
 }
 .menu a {
   color: var(--dark-cian);
+}
+.show-menu {
+  display: flex;
+  flex-direction: column;
 }
 .menu::after {
   content: "";
@@ -329,9 +333,7 @@ footer {
   width: 50%;
   margin: 0 auto;
 }
-.show-menu {
-  display: none;
-}
+
 @media screen and (min-width: 774px) {
   .nav-links {
     display: block;
