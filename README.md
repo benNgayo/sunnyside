@@ -27,7 +27,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./imgaes/sunny.png)
+![](./images/sunny.png)
 
 ### Links
 
