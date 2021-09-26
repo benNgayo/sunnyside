@@ -27,7 +27,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./C:\Users\ADMIN\Desktop\FRONT END projects\landing page\images\sunny.png)
+![](./imgaes/sunny.png)
 
 ### Links
 
